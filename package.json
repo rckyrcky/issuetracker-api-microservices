@@ -1,0 +1,46 @@
+{
+  "name": "issuetracker-api-microservices",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "install:gateway": "npm install --prefix gateway",
+    "install:users": "npm install --prefix users-service",
+    "install:projects": "npm install --prefix projects-service",
+    "install:issues": "npm install --prefix issues-service",
+    "install:notifications": "npm install --prefix notifications-service",
+    "install:all": "run-s install:gateway install:users install:projects install:issues install:notifications",
+
+
+    "migrate:users": "npm run migrate --prefix users-service",
+    "migrate:projects": "npm run migrate --prefix projects-service",
+    "migrate:issues": "npm run migrate --prefix issues-service",
+    "migrate:notifications": "npm run migrate --prefix notifications-service",
+    "migrate:all": "run-p migrate:users migrate:projects migrate:issues migrate:notifications",
+
+
+    "seed:users": "npm run seeder --prefix users-service",
+    "seed:projects": "npm run seeder --prefix projects-service",
+    "seed:issues": "npm run seeder --prefix issues-service",
+    "seed:notifications": "npm run seeder --prefix notifications-service",
+    "seed:all": "run-s seed:users seed:projects seed:issues seed:notifications",
+
+
+    "setup": "run-s --continue-on-error install:all migrate:all seed:all",
+
+
+    "start:gateway": "npm run start:dev --prefix gateway",
+    "start:users": "npm run start:dev --prefix users-service",
+    "start:projects": "npm run start:dev --prefix projects-service",
+    "start:issues": "npm run start:dev --prefix issues-service",
+    "start:notifications": "npm run start:dev --prefix notifications-service",
+    "start:all": "concurrently -n gateway,user,project,issue,notif -c blue,green,yellow,cyan,magenta \"npm run start:gateway\" \"npm run start:users\" \"npm run start:projects\" \"npm run start:issues\" \"npm run start:notifications\""
+
+
+  },
+  "author": "ricky",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
