@@ -117,19 +117,25 @@ The full-stack Next.js version is available here: https://github.com/rckyrcky/is
     docker compose up -d
     ```
 
-5.  Run the setup
+5.  Install dependency
+
+    ```bash
+    npm install
+    ```
+
+6.  Run the setup
 
     ```bash
     npm run setup
     ```
 
-6.  Run the development server
+7.  Run the development server
 
     ```bash
     npm run start:all
     ```
 
-7.  Basic API documentation is available via Swagger for exploring available endpoints
+8.  Basic API documentation is available via Swagger for exploring available endpoints
 
     http://localhost:3000/docs
 
