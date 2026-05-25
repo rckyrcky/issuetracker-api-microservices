@@ -1,4 +1,4 @@
-# 📌 IssueTracker API - API for Simple Project Management Focused on Issue Tracking and Team Collaboration (Microservices)
+# 📌 IssueTracker API - REST API for Project Management Focused on Issue Tracking and Team Collaboration (Microservices)
 
 ![Gambar](issuetracker-api.png)
 
@@ -15,7 +15,7 @@
 
 ## ✨ Description
 
-IssueTracker API is an API for simple project management focused on issue tracking and team collaboration.
+IssueTracker API is a REST API for project management focused on issue tracking and team collaboration.
 Users can create projects, manage issues with different statuses and priorities, invite team members, and collaborate through comments.
 
 This project is a NestJS-based API implementation created as a backend-oriented version of a full-stack IssueTracker originally built with Next.js.
@@ -80,7 +80,7 @@ The full-stack Next.js version is available here: https://github.com/rckyrcky/is
 
 - Cursor-based pagination for scalable data fetching
 
-- Schema validation and automated testing
+- Schema validation (Zod), testing (Jest), and logging (Winston)
 
 ## 🛠️ Architecture
 
@@ -109,7 +109,7 @@ The full-stack Next.js version is available here: https://github.com/rckyrcky/is
 
 3.  Set up environment variables
 
-    Create a .env file based on .env.example and fill in the required values. Each service may have its own environment configuration. Refer to each service's .env.example if needed.
+    Create an .env file based on .env.example and fill in the required values. Each service may have its own environment configuration. Refer to each service's .env.example if needed.
 
 4.  Start infrastructure (PostgreSQL and RabbitMQ)
 
@@ -135,7 +135,7 @@ The full-stack Next.js version is available here: https://github.com/rckyrcky/is
     npm run start:all
     ```
 
-8.  Basic API documentation is available via Swagger for exploring available endpoints
+8.  Basic API documentation is available via Swagger UI for exploring available endpoints
 
     http://localhost:3000/docs
 
@@ -143,6 +143,6 @@ The full-stack Next.js version is available here: https://github.com/rckyrcky/is
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-[Back to top](README.md#-issuetracker-api---api-for-simple-project-management-focused-on-issue-tracking-and-team-collaboration-microservices)
+[Back to top](README.md#-issuetracker-api---rest-api-for-project-management-focused-on-issue-tracking-and-team-collaboration-microservices)
 
 © 2026 ricky | [ricky.rf.gd](https://ricky.rf.gd)

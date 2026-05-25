@@ -42,8 +42,8 @@ async function bootstrap() {
   );
 
   const config = new DocumentBuilder()
-    .setTitle('IssueTracker')
-    .setDescription('The IssueTracker API description')
+    .setTitle('IssueTracker API')
+    .setDescription('REST API for Project Management Focused on Issue Tracking and Team Collaboration')
     .setVersion('1.0')
     .build();
 
